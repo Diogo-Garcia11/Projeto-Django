@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'polls.apps.PollsConfig',
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -77,10 +78,14 @@ DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
         "NAME": "pythonproj",
-        "USER": "root",
-        "PASSWORD": "",
+        "USER": "diogoadmin",
+        "PASSWORD": "diogoket211023",
         "HOST": "localhost",
-        "PORT": "3306",  # Default MySQL port
+        "PORT": "3306", # Default MySQL port
+        "OPTIONS" : {
+        'charset': 'utf8mb4',
+        'init_command':'SET sql_mode="STRICT_TRANS_TABLES"',
+        } 
     }
 }
 
